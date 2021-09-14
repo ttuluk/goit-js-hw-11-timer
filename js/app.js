@@ -4,7 +4,7 @@ const refs = {
   stopBtn: document.querySelector('button[data-action-stop]'),
   clockface: document.querySelector('.js-clockface'),
 };
-
+const DATE = 'Jul 17, 2022';
 class Timer {
   constructor({ onTick }) {
     this.intervalId = null;
@@ -24,7 +24,7 @@ class Timer {
       return;
     }
 
-    const startTime = new Date('Sep 17, 2021');
+    const startTime = new Date(DATE);
     this.isActive = true;
 
     this.intervalId = setInterval(() => {
