@@ -20,12 +20,6 @@ input {
   font: inherit;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 .alert {
   position: fixed;
   bottom: 20px;
@@ -57,21 +51,40 @@ img {
 }
 
 .timer {
+  display: flex;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   color: #212121;
   border-radius: 2px;
 }
-
-.clockface {
+.field {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80px;
+  margin: 10px;
+  color: #212121;
+  border-radius: 2px;
+}
+span {
   margin-bottom: 15px;
   font-family: "Roboto Mono", monospace;
-  font-size: 80px;
+  font-size: 20px;
+  text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 24px;
 }
 
+.value {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: grey;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  text-align: center;
+}
 .timer-btn {
   display: inline-flex;
   margin-left: 4px;
@@ -86,6 +99,7 @@ img {
   border-radius: 3px;
 }
 
-.timer-btn.is-active {
+.timer-btn:hover,
+.timer-btn:focus {
   background-color: #2196f3;
 }
